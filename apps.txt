@@ -1,0 +1,7 @@
+# Flatpak app IDs available from the Software app / Flathub.
+com.valvesoftware.Steam
+com.heroicgameslauncher.hgl
+net.lutris.Lutris
+com.usebottles.bottles
+org.mozilla.firefox
+com.opera.opera-gx
