@@ -61,3 +61,25 @@ These applications add tools suited to this setup focus. They are installed from
 15. **GNOME Sound Recorder** (org.gnome.SoundRecorder) — capture voice and field notes.
 
 Emulator frontends do not include game ROMs or copyrighted game files; supply only files you are legally allowed to use.
+
+## Fifteen further purpose-specific preinstalled applications
+
+This second batch adds another set of apps selected for this setup’s purpose. They are installed from Flathub by the setup scripts.
+
+1. **ScummVM** (org.scummvm.ScummVM) — run supported classic adventure games when you provide lawful game data files.
+2. **KPatience** (org.kde.kpat) — play a collection of solitaire card games.
+3. **KMines** (org.kde.kmines) — play a Minesweeper-style puzzle game.
+4. **KNights** (org.kde.knights) — study and play chess against a person or engine.
+5. **KSudoku** (org.kde.ksudoku) — practice Sudoku and number-placement puzzles.
+6. **KMahjongg** (org.kde.kmahjongg) — play a tile-matching solitaire game.
+7. **KShisen** (org.kde.kshisen) — play a Mahjong-tile matching puzzle.
+8. **Kapman** (org.kde.kapman) — play a maze arcade game inspired by Pac-Man.
+9. **KGoldrunner** (org.kde.kgoldrunner) — solve platform puzzles by collecting gold and avoiding enemies.
+10. **KJumpingCube** (org.kde.kjumpingcube) — play a territory-control strategy puzzle.
+11. **KFourInLine** (org.kde.kfourinline) — play four-in-a-row against a person or computer.
+12. **KDiamond** (org.kde.kdiamond) — solve a three-in-a-row matching puzzle.
+13. **KNetWalk** (org.kde.knetwalk) — solve network-routing logic puzzles.
+14. **Klickety** (org.kde.klickety) — clear matching-color puzzle boards.
+15. **Naval Battle** (org.kde.knavalbattle) — play a Battleship-style strategy game.
+
+Game frontends do not include proprietary game data; add only games or files you are allowed to use.

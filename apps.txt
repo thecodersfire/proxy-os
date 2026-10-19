@@ -48,3 +48,20 @@ org.gnome.Papers
 org.gnome.Weather
 org.gnome.Contacts
 org.gnome.SoundRecorder
+
+# Fifteen further preinstalled purpose-specific applications
+org.scummvm.ScummVM
+org.kde.kpat
+org.kde.kmines
+org.kde.knights
+org.kde.ksudoku
+org.kde.kmahjongg
+org.kde.kshisen
+org.kde.kapman
+org.kde.kgoldrunner
+org.kde.kjumpingcube
+org.kde.kfourinline
+org.kde.kdiamond
+org.kde.knetwalk
+org.kde.klickety
+org.kde.knavalbattle
