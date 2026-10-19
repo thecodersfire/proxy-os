@@ -50,6 +50,9 @@ install_flatpaks \
 # Ten additional purpose-specific applications
 install_flatpaks org.godotengine.Godot org.blender.Blender com.vscodium.codium org.gnome.Boxes org.gnome.Logs org.gnome.Calculator org.gnome.baobab com.github.tchx84.Flatseal org.gnome.TextEditor org.gnome.Calendar
 
+
+# Fifteen additional purpose-specific applications
+install_flatpaks org.libretro.RetroArch org.DolphinEmu.dolphin-emu org.ppsspp.PPSSPP net.pcsx2.PCSX2 org.mamedev.MAME com.github.Matoking.protontricks org.gnome.gitg org.gnome.Evolution org.mozilla.Thunderbird org.gnome.clocks org.gnome.Extensions org.gnome.Papers org.gnome.Weather org.gnome.Contacts org.gnome.SoundRecorder
 read -r -p 'Install Bottles as an additional compatibility tool? [y/N] ' answer
 if [[ "${answer}" =~ ^[Yy]([Ee][Ss])?$ ]]; then
   install_flatpaks com.usebottles.bottles

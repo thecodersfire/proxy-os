@@ -39,3 +39,25 @@ The setup installs these ten Flathub apps selected for gaming desktop and game c
 10. **GNOME Calendar** — schedule sessions, deadlines, and events (org.gnome.Calendar)
 
 Flathub distributes the app packages. Check each publisher license and terms. This repository contains app IDs and documentation, not third-party binaries.
+
+## Fifteen more purpose-specific preinstalled applications
+
+These applications add tools suited to this setup focus. They are installed from Flathub by the setup scripts.
+
+1. **RetroArch** (org.libretro.RetroArch) — organize and run compatible retro-game emulator cores.
+2. **Dolphin Emulator** (org.DolphinEmu.dolphin-emu) — run compatible GameCube and Wii homebrew or legally obtained game files.
+3. **PPSSPP** (org.ppsspp.PPSSPP) — run compatible PSP homebrew or legally obtained game files.
+4. **PCSX2** (net.pcsx2.PCSX2) — run compatible PlayStation 2 homebrew or legally obtained game files.
+5. **MAME** (org.mamedev.MAME) — run compatible arcade software using lawful game files.
+6. **Protontricks** (com.github.Matoking.protontricks) — apply compatibility fixes to Steam Proton prefixes.
+7. **Gitg** (org.gnome.gitg) — review Git history and branches graphically.
+8. **Evolution** (org.gnome.Evolution) — manage email, calendars, and contacts.
+9. **Thunderbird** (org.mozilla.Thunderbird) — manage email and communication accounts.
+10. **GNOME Clocks** (org.gnome.clocks) — time work sessions and events.
+11. **GNOME Extensions** (org.gnome.Extensions) — manage GNOME desktop extensions.
+12. **GNOME Papers** (org.gnome.Papers) — read project and reference PDFs.
+13. **GNOME Weather** (org.gnome.Weather) — check local weather conditions.
+14. **GNOME Contacts** (org.gnome.Contacts) — organize partner and team contacts.
+15. **GNOME Sound Recorder** (org.gnome.SoundRecorder) — capture voice and field notes.
+
+Emulator frontends do not include game ROMs or copyrighted game files; supply only files you are legally allowed to use.

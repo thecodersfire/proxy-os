@@ -59,4 +59,4 @@ Keep this GitHub project to its original artwork, scripts, and documentation; do
 See [FEATURES.md](FEATURES.md) for three local tools included for general productivity.
 
 
-The installer includes ten more applications selected for this distro's purpose. See [FEATURES.md](FEATURES.md) for the list.
+The installer includes fifteen additional purpose-specific applications; the complete list is in [FEATURES.md](FEATURES.md).
