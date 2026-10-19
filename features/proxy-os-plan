@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+mkdir -p "$HOME/Documents/proxy-os-session-plans"
+file="$HOME/Documents/proxy-os-session-plans/plan-$(date +%Y%m%d-%H%M%S).md"
+{
+ printf '# Proxy-OS session plan\n\n'
+ printf 'Created: %s\n\n' "$(date -Is)"
+ printf 'Purpose: gaming desktop and game compatibility\n\n## Prompts\n'
+ printf '%s\n' '- Which game will you play?' '- What is your session goal and time limit?' '- Which controller, Proton, or capture setting should you check?'
+ printf '\n## Notes\n'
+} > "$file"
+nano "$file"
+printf 'Saved locally: %s\n' "$file"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+base="$HOME/Documents/proxy-os-workspace"
+mkdir -p "$base/Game Notes" "$base/Screenshots" "$base/Session Plans"
+printf 'Workspace ready: %s\n' "$base"

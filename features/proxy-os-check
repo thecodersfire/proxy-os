@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ask(){ local answer; read -r -p "$1 [y/N] " answer; [[ "$answer" =~ ^[Yy]([Ee][Ss])?$ ]]; }
+echo 'Proxy-OS readiness checklist'
+ask 'Is the game launch target correct?' || true
+ask 'Is controller input and free storage ready?' || true
+ask 'Have you checked compatibility and account security?' || true
+echo 'Checklist complete. Answers were not saved or transmitted.'
