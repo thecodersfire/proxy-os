@@ -87,3 +87,23 @@ Game frontends do not include proprietary game data; add only games or files you
 ## Blender included in every setup
 
 Blender (org.blender.Blender) is included in every setup for 3D modeling, animation, rendering, and video editing. Installers fetch it from Flathub; Blender’s own license and terms apply.
+
+## Fifteen additional purpose-specific applications
+
+The setup adds these Flathub applications for gaming desktop and game compatibility. Applications are fetched from Flathub by the setup script; each app keeps its own licensing and terms.
+
+1. **Bomber** (org.kde.bomber) — Play a compact single-player arcade bombing game.
+2. **Bovo** (org.kde.bovo) — Play a two-player five-in-a-row strategy game.
+3. **KBounce** (org.kde.kbounce) — Capture board space in an arcade puzzle game.
+4. **KBreakOut** (org.kde.kbreakout) — Break brick formations in an arcade game.
+5. **Kollision** (org.kde.kollision) — Avoid moving balls in a reflex and timing game.
+6. **KReversi** (org.kde.kreversi) — Play Reversi and plan captures on a board.
+7. **KSnakeDuel** (org.kde.ksnakeduel) — Compete in a two-player snake arena.
+8. **Konquest** (org.kde.konquest) — Plan a turn-based interplanetary strategy game.
+9. **KsirK** (org.kde.ksirk) — Play turn-based world-conquest strategy.
+10. **Atlantik** (org.kde.atlantik) — Play a networked property trading board game.
+11. **Picmi** (org.kde.picmi) — Solve nonogram picture-logic puzzles.
+12. **LSkat** (org.kde.lskat) — Play a trick-taking card game for two players.
+13. **GNOME Mines** (org.gnome.Mines) — Solve a classic hidden-mine logic puzzle.
+14. **GNOME Sudoku** (org.gnome.Sudoku) — Generate and solve Sudoku puzzles with notes and hints.
+15. **Tetravex** (org.gnome.Tetravex) — Match numbered tile edges in a timed logic puzzle.

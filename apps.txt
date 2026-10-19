@@ -65,3 +65,20 @@ org.kde.kdiamond
 org.kde.knetwalk
 org.kde.klickety
 org.kde.knavalbattle
+
+# Fifteen further purpose-specific applications
+org.kde.bomber
+org.kde.bovo
+org.kde.kbounce
+org.kde.kbreakout
+org.kde.kollision
+org.kde.kreversi
+org.kde.ksnakeduel
+org.kde.konquest
+org.kde.ksirk
+org.kde.atlantik
+org.kde.picmi
+org.kde.lskat
+org.gnome.Mines
+org.gnome.Sudoku
+org.gnome.Tetravex
