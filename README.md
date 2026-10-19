@@ -59,4 +59,4 @@ Keep this GitHub project to its original artwork, scripts, and documentation; do
 See [FEATURES.md](FEATURES.md) for three local tools included for general productivity.
 
 
-The installer includes 43 purpose-specific applications beyond its core selection; the complete list is in [FEATURES.md](FEATURES.md).
+Blender is included in every setup, alongside the purpose-specific apps listed in [FEATURES.md](FEATURES.md).
