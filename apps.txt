@@ -1,7 +1,21 @@
-# Flatpak app IDs available from the Software app / Flathub.
+# Core apps installed by install.sh
 com.valvesoftware.Steam
-com.heroicgameslauncher.hgl
-net.lutris.Lutris
-com.usebottles.bottles
 org.mozilla.firefox
 com.opera.opera-gx
+
+# Optional game launchers and compatibility manager
+com.usebottles.bottles
+
+# Optional game capture and media playback
+com.obsproject.Studio
+org.videolan.VLC
+
+# Official web/download shortcuts (not bundled software)
+ChatGPT: https://chatgpt.com/
+Claude: https://claude.ai/
+DaVinci Resolve for Linux: https://www.blackmagicdesign.com/products/davinciresolve
+
+# Three additional preinstalled purpose-specific applications
+com.heroicgameslauncher.hgl
+net.lutris.Lutris
+net.davidotek.pupgui2

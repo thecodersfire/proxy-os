@@ -12,3 +12,13 @@ Install them from this repository:
 
     mkdir -p "$HOME/.local/bin"
     install -m 0755 features/proxy-os-workspace features/proxy-os-plan features/proxy-os-check "$HOME/.local/bin/"
+
+## Preinstalled purpose software
+
+The installer adds these three Flathub applications for gaming desktop and game compatibility:
+
+1. **Heroic Games Launcher** — com.heroicgameslauncher.hgl
+2. **Lutris** — net.lutris.Lutris
+3. **ProtonUp-Qt** — net.davidotek.pupgui2
+
+They are installed from Flathub during setup. The repository contains application IDs and documentation, not third-party binaries; each publisher’s terms and licenses apply.

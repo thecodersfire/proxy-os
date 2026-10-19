@@ -1,28 +1,31 @@
 #!/usr/bin/env bash
-# Run inside Cubic's chroot terminal while building the ISO.
-set -euo pipefail
+# Run in Cubic's chroot after copying proxy-os-neon.svg to /usr/share/backgrounds.
+set -Eeuo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
+
+[[ -f /usr/share/backgrounds/proxy-os-neon.svg ]] || {
+  echo 'Copy proxy-os-neon.svg into /usr/share/backgrounds before running this script.' >&2
+  exit 1
+}
+
 dpkg --add-architecture i386
 apt-get update
 apt-get install -y --no-install-recommends \
-  flatpak gnome-software gnome-software-plugin-flatpak dconf-cli \
+  flatpak gnome-software gnome-software-plugin-flatpak dconf-cli pciutils \
   mesa-vulkan-drivers mesa-vulkan-drivers:i386 vulkan-tools \
-  linux-firmware
+  steam-devices gamemode mangohud linux-firmware
 
-# Keep Ubuntu's compatibility identity for package management, but show the
-# user's distro name in system information. Update the target of Ubuntu's
-# /etc/os-release symlink when present.
+# Keep Ubuntu's package identity, repositories, and update path intact.
+# Change only the visible name in the release display fields.
 os_release_file=/etc/os-release
 if [[ -L /etc/os-release && -f /usr/lib/os-release ]]; then
   os_release_file=/usr/lib/os-release
 fi
-sed -i 's/^NAME=.*/NAME="Proxy OS"/; s/^PRETTY_NAME=.*/PRETTY_NAME="Proxy OS 26.04 LTS"/' "$os_release_file"
+sed -i \
+  's/^NAME=.*/NAME="Proxy OS"/; s/^PRETTY_NAME=.*/PRETTY_NAME="Proxy OS 26.04 LTS"/' \
+  "$os_release_file"
 
-if [[ ! -f /usr/share/backgrounds/proxy-os-neon.svg ]]; then
-  echo "Copy proxy-os-neon.svg to /usr/share/backgrounds/ in Cubic before running this script." >&2
-  exit 1
-fi
 install -d -m 0755 /etc/dconf/db/local.d
 if [[ ! -f /etc/dconf/profile/user ]]; then
   install -d -m 0755 /etc/dconf/profile
@@ -38,19 +41,51 @@ picture-uri-dark='file:///usr/share/backgrounds/proxy-os-neon.svg'
 EOF
 dconf update
 
-# Make the Flatpak catalog available in the installed system and live session.
-flatpak remote-add --system --if-not-exists flathub \
-  https://flathub.org/repo/flathub.flatpakrepo
+# Web shortcuts and official Resolve download page; no third-party application
+# binaries are bundled in the ISO.
+install -d -m 0755 /usr/share/applications
+cat > /usr/share/applications/chatgpt.desktop <<'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ChatGPT
+Comment=Open ChatGPT
+Exec=xdg-open https://chatgpt.com/
+Terminal=false
+Icon=web-browser
+Categories=Network;WebBrowser;
+EOF
+cat > /usr/share/applications/claude.desktop <<'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Claude
+Comment=Open Claude
+Exec=xdg-open https://claude.ai/
+Terminal=false
+Icon=web-browser
+Categories=Network;WebBrowser;
+EOF
+cat > /usr/share/applications/davinci-resolve.desktop <<'EOF'
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DaVinci Resolve for Linux
+Comment=Open the official DaVinci Resolve download page
+Exec=xdg-open https://www.blackmagicdesign.com/products/davinciresolve
+Terminal=false
+Icon=applications-multimedia
+Categories=AudioVideo;Video;
+EOF
 
-# Preload the gaming launchers into the image. They appear in the app menu and
-# can be updated through GNOME Software after installation.
-flatpak install --system --noninteractive flathub \
-  com.valvesoftware.Steam \
-  com.heroicgameslauncher.hgl \
-  net.lutris.Lutris \
-  com.usebottles.bottles \
-  org.mozilla.firefox \
-  com.opera.opera-gx
+# Add the app catalog only. Flatpak apps install per user after first boot via
+# install.sh, avoiding incomplete app installations during ISO construction.
+flatpak remote-add --system --if-not-exists flathub \
+  https://dl.flathub.org/repo/flathub.flatpakrepo
 
 apt-get clean
 rm -rf /var/lib/apt/lists/*
+echo 'Proxy OS base customization finished. Install apps after first login with install.sh.'
+
+# Additional purpose-specific applications installed into the customized image.
+flatpak install --system --noninteractive flathub org.prismlauncher.PrismLauncher org.blender.Blender org.gimp.GIMP

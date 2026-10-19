@@ -42,15 +42,14 @@ install_flatpaks() {
 install_flatpaks \
   com.valvesoftware.Steam \
   org.mozilla.firefox \
-  com.opera.opera-gx
+  com.opera.opera-gx \
+  com.heroicgameslauncher.hgl \
+  net.lutris.Lutris \
+  net.davidotek.pupgui2
 
-read -r -p 'Install the complete launcher suite (Heroic, Lutris, Bottles, ProtonUp-Qt)? [Y/n] ' answer
-if [[ ! "${answer}" =~ ^[Nn]([Oo])?$ ]]; then
-  install_flatpaks \
-    com.heroicgameslauncher.hgl \
-    net.lutris.Lutris \
-    com.usebottles.bottles \
-    net.davidotek.pupgui2
+read -r -p 'Install Bottles as an additional compatibility tool? [y/N] ' answer
+if [[ "${answer}" =~ ^[Yy]([Ee][Ss])?$ ]]; then
+  install_flatpaks com.usebottles.bottles
 fi
 
 read -r -p 'Install creator tools (OBS Studio and VLC)? [y/N] ' answer

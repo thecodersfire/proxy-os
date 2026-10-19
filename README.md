@@ -58,3 +58,9 @@ Keep this GitHub project to its original artwork, scripts, and documentation; do
 
 See [FEATURES.md](FEATURES.md) for three local tools included for general productivity.
 
+
+The installer also includes three purpose-specific applications: **LibreOffice, GNOME Calendar, KeePassXC**. See [FEATURES.md](FEATURES.md).
+
+The installer also includes three purpose-specific applications: **Prism Launcher, Blender, GIMP**. See [FEATURES.md](FEATURES.md).
+
+The installer also includes three purpose-specific applications: **Heroic Games Launcher, Lutris, ProtonUp-Qt**. See [FEATURES.md](FEATURES.md).
