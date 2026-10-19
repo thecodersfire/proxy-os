@@ -89,3 +89,6 @@ echo 'Proxy OS base customization finished. Install apps after first login with 
 
 # Additional purpose-specific applications installed into the customized image.
 flatpak install --system --noninteractive flathub org.prismlauncher.PrismLauncher org.blender.Blender org.gimp.GIMP
+
+# Ten additional purpose-specific applications
+flatpak install --system --noninteractive flathub org.godotengine.Godot org.blender.Blender com.vscodium.codium org.gnome.Boxes org.gnome.Logs org.gnome.Calculator org.gnome.baobab com.github.tchx84.Flatseal org.gnome.TextEditor org.gnome.Calendar

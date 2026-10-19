@@ -47,6 +47,9 @@ install_flatpaks \
   net.lutris.Lutris \
   net.davidotek.pupgui2
 
+# Ten additional purpose-specific applications
+install_flatpaks org.godotengine.Godot org.blender.Blender com.vscodium.codium org.gnome.Boxes org.gnome.Logs org.gnome.Calculator org.gnome.baobab com.github.tchx84.Flatseal org.gnome.TextEditor org.gnome.Calendar
+
 read -r -p 'Install Bottles as an additional compatibility tool? [y/N] ' answer
 if [[ "${answer}" =~ ^[Yy]([Ee][Ss])?$ ]]; then
   install_flatpaks com.usebottles.bottles

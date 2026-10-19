@@ -15,7 +15,19 @@ ChatGPT: https://chatgpt.com/
 Claude: https://claude.ai/
 DaVinci Resolve for Linux: https://www.blackmagicdesign.com/products/davinciresolve
 
-# Three additional preinstalled purpose-specific applications
+# Three previously added purpose-specific applications
 com.heroicgameslauncher.hgl
 net.lutris.Lutris
 net.davidotek.pupgui2
+
+# Ten additional preinstalled purpose-specific applications
+org.godotengine.Godot
+org.blender.Blender
+com.vscodium.codium
+org.gnome.Boxes
+org.gnome.Logs
+org.gnome.Calculator
+org.gnome.baobab
+com.github.tchx84.Flatseal
+org.gnome.TextEditor
+org.gnome.Calendar
